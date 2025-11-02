@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブロック崩しゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>ブロック崩し</h1>
+        <div class="game-info">
+            <div class="score">スコア: <span id="score">0</span></div>
+            <div class="lives">残機: <span id="lives">3</span></div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="controls">
+            <p>← → キーまたはマウスでパドルを操作</p>
+            <p>スペースキーでスタート/一時停止</p>
+        </div>
+        <div id="gameMessage" class="game-message hidden"></div>
+        <button id="restartBtn" class="restart-btn hidden">もう一度プレイ</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

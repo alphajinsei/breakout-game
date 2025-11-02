@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+.score, .lives {
+    padding: 10px 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+#score, #lives {
+    color: #667eea;
+    font-size: 1.3em;
+}
+
+#gameCanvas {
+    border: 3px solid #333;
+    border-radius: 10px;
+    background: #000;
+    display: block;
+    margin: 0 auto;
+    cursor: none;
+}
+
+.controls {
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.controls p {
+    margin: 5px 0;
+}
+
+.game-message {
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s;
+}
+
+.game-message.win {
+    color: #28a745;
+    background: #d4edda;
+}
+
+.game-message.lose {
+    color: #dc3545;
+    background: #f8d7da;
+}
+
+.restart-btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.restart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.restart-btn:active {
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
